@@ -36,8 +36,8 @@
     }
 </style>
 <body>
-    <h1>Think of a number between 0 to 1 Lakh</h1>
-    <h1>I will guess it in less than 16 tries</h1>
+    <h1 id="think">Think of a number between 0 to 1 Lakh</h1>
+    <h1 id="guess">I will guess it in less than 16 tries</h1>
     <h2 id="output"></h2>
     <h1 id="ans"></h1>
     <div class="container">
@@ -45,10 +45,13 @@
         <button id="lower" class="btn hidden">Lower</button>
         <button id="thatsit" class="btn hidden">Correct</button>
         <button onclick="binarySearch()" class="btn" id="start">Start</button>
+        <button class="btn hidden" id="restart" onclick="location.reload()">Restart</button>
     </div>
 </body>
 <script>
     function binarySearch(){
+        document.getElementById('think').classList.add('hidden');
+        document.getElementById('guess').classList.add('hidden');
         document.getElementById('start').classList.add('hidden');
         document.getElementById('higher').classList.remove('hidden');
         document.getElementById('lower').classList.remove('hidden');
@@ -66,7 +69,9 @@
             document.getElementById('higher').classList.add('hidden');
             document.getElementById('lower').classList.add('hidden');
             document.getElementById('thatsit').classList.add('hidden');
-
+            document.getElementById('output').classList.add('hidden');
+            document.getElementById('start').classList.add('hidden');
+            document.getElementById('restart').classList.remove('hidden');
             document.getElementById('ans').innerText='You had chosen '+mid;
         });
         document.getElementById('higher').addEventListener('click',()=>{
