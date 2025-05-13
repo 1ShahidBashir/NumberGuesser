@@ -43,7 +43,7 @@
 </style>
 <body>
     <h1 id="think">Think of a number between 0 to 1 Lakh</h1>
-    <h1 id="guess">I will guess it in less than 16 tries</h1>
+    <h1 id="guess">I will guess it within 16 tries</h1>
     <h2 id="counter" class="hidden"></h2>
     <h2 id="output"></h2>
     <h1 id="ans"></h1>
@@ -64,7 +64,7 @@
         document.getElementById('lower').classList.remove('hidden');
         document.getElementById('thatsit').classList.remove('hidden');
         document.getElementById('counter').classList.remove('hidden');
-        let count=0;
+        let count=-1;
         function updatemid(){
             mid=start+Math.floor((end-start)/2);
             document.getElementById('output').innerText=mid+'?';
