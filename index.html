@@ -10,6 +10,7 @@
         height: 100%;
         width: 100%;
         margin: 0;
+        box-sizing: border-box;
     }
     body{
         display: flex;
@@ -20,6 +21,11 @@
         height: 100%;
         background-image: linear-gradient(to bottom right ,red, yellow);
         background-repeat: no-repeat;
+    }
+    @media(max-width: 600px){
+        body{
+            padding-left: 20px;
+        }
     }
     .btn{
         border: 0;
